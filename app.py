@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.tittle("Modulo 1 Fundamentos de Programacion")
+st.title("Módulo 1 - Fundamentos de Programación")
 
