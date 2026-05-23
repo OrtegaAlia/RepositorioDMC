@@ -49,6 +49,10 @@ if st.button("Agregar movimiento"):
             "Tipo": tipo,
             "Valor": valor
         }
+        st.session_state.movimientos.append(nuevo_movimiento)
+        st.toast("Movimiento agregado con éxito")
+
+
 
 elif Ejercicio == "Ejercicio 2":
   st.write("Bienvenido Ejercicio 2")
