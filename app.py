@@ -29,7 +29,7 @@ st.sidebar.markdown("### 🛠️ Tecnologías Utilizadas")
 
 st.sidebar.write("Streamlit, NumPy, arrays, DataFrame y Pandas")
 
-Ejercicio = st.sidebar.selectbox("Seleccione un Ejercicio", ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"] )
+Ejercicio = st.sidebar.selectbox("### 📋Seleccione un Ejercicio", ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"] )
 
 if Ejercicio == "Ejercicio 1":
   st.write("Bienvenido Ejercicio 1")
