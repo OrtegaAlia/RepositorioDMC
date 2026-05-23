@@ -16,13 +16,8 @@ st.header("📋 Información del Proyecto")
 
 col1, col2 = st.columns(2)
 
-with col1:
-    st.markdown("**Estudiante:**")
-    st.text("Alia Ortega Alvarado")
-
-with col2:
-    st.markdown("**Información General:**")
-    st.text("Analista de Contabilidad / Administración y Finanzas / ME Elecmetal Comercial Perú S.A.C.")
-    
-    st.markdown("**Año:**")
-    st.text("2026")
+with col_datos:
+    st.markdown("### 🧑‍💻 Información del Estudiante")
+    st.write("**Nombre Completo:** Alia Ortega Alvarado")
+    st.write("**Especialidad / Rol:** Analista de Contabilidad")
+    st.write("**Año Académico:** 2026")
