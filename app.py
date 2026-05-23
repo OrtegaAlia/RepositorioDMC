@@ -27,3 +27,4 @@ with col2:
     st.markdown("""Este proyecto es una aplicación interactiva diseñada para centralizar flujos de trabajo clave. 
                    Permite realizar el control de **flujos de caja**, la gestión avanzada de ingresos y gastos, 
                    así como la ejecución de cálculos financieros y operaciones **CRUD** completas mediante módulos y librerías externas de Python.""")
+
