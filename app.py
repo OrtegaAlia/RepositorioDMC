@@ -38,6 +38,17 @@ if Ejercicio == "Ejercicio 1":
   Concepto = st.text_input("Concepto", placeholder="Ej. Pago de alquiler, Salario")
   Tipo = st.selectbox("Tipo de movimiento", ["Ingreso", "Gasto"])
   Valor = st.number_input("Valor (S/)", min_value=0.0, step=10.0, format="%.2f")
+if st.button("Agregar movimiento"):
+    if concepto.strip() == "":
+        st.warning("Por favor, ingresa un concepto válido.")
+    elif valor <= 0:
+        st.warning("El valor debe ser mayor a cero.")
+    else:
+        nuevo_movimiento = {
+            "Concepto": concepto,
+            "Tipo": tipo,
+            "Valor": valor
+        }
 
 elif Ejercicio == "Ejercicio 2":
   st.write("Bienvenido Ejercicio 2")
