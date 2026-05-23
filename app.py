@@ -11,3 +11,9 @@ st.write("Alia Ortega Alvarado")
 st.subheader("Módulo 1 - Fundamentos de Programación")
 
 st.sidebar.title("Parámetros")
+
+st.markdown("**Información General:**")
+st.text("Analista de Contabilidad / Finanzas / ME Elecmetal Comercial Perú SAC")
+    
+st.markdown("**Año:**")
+st.text("2026")
