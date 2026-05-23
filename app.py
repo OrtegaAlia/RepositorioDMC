@@ -35,7 +35,7 @@ if Ejercicio == "Ejercicio 1":
   st.write("Bienvenido Ejercicio 1")
   st.image("Flujo de Caja.png")
 
-if "lista_movimientos" not in st.session_state:
+  if "lista_movimientos" not in st.session_state:
 st.session_state.lista_movimientos = []
 st.markdown("""
 Este módulo permite registrar de forma dinámica tus movimientos financieros. 
