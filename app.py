@@ -52,6 +52,9 @@ if st.button("Agregar movimiento"):
     elif valor <= 0:
         st.warning("El valor debe ser mayor a cero.")
     else:
+        if "movimientos" not in st.session_state:
+            st.session_state.movimientos = []
+            
         nuevo_movimiento = {
             "Concepto": concepto,
             "Tipo": tipo,
