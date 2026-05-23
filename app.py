@@ -34,6 +34,10 @@ Ejercicio = st.sidebar.selectbox("📋Seleccione un Ejercicio", ["Ejercicio 1","
 if Ejercicio == "Ejercicio 1":
   st.write("Bienvenido Ejercicio 1: Flujo de Caja con listas")
   st.image("Flujo de Caja.png")
+  st.markdown("""
+    Esta aplicación permite registrar tus movimientos financieros diarios. 
+    Ingresa el concepto, el tipo de movimiento y el valor para calcular tu saldo final.
+    """)
   st.subheader("Registrar Nuevo Movimiento")
   Concepto = st.text_input("Concepto", placeholder="Ej. Pago de alquiler, Salario")
   Tipo = st.selectbox("Tipo de movimiento", ["Ingreso", "Gasto"])
