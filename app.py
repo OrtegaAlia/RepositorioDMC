@@ -8,6 +8,8 @@ st.sidebar.title("Parámetros")
 
 st.write("Elaborado por: Alia Ortega")
 
+Ejercicio = st.sidebar.selectbox("Seleccione un Ejercicio", ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"] )
+
 URL_LOGO = "https://python.org"
 
 st.image(URL_LOGO, width=200, caption="Python DMC")
