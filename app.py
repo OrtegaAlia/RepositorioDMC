@@ -73,14 +73,14 @@ if st.session_state.movimientos:
 
     st.subheader("Resumen Financiero")
     col1, col2, col3 = st.columns(3)
-    col1.metric("Total Ingresos", f"${total_ingresos:,.2f}")
-    col2.metric("Total Gastos", f"${total_gastos:,.2f}")
-    col3.metric("Saldo Final", f"${saldo_final:,.2f}")
+    col1.metric("Total Ingresos", f"S/{total_ingresos:,.2f}")
+    col2.metric("Total Gastos", f"S/{total_gastos:,.2f}")
+    col3.metric("Saldo Final", f"S/{saldo_final:,.2f}")
 
     if saldo_final >= 0:
-        st.success(f"🔴 El flujo de caja está **A FAVOR** con un saldo de ${saldo_final:,.2f}")
+        st.success(f"🔴 El flujo de caja está **A FAVOR** con un saldo de S/{saldo_final:,.2f}")
     else:
-        st.error(f"🚨 El flujo de caja está **EN CONTRA** con un déficit de ${saldo_final:,.2f}")
+        st.error(f"🚨 El flujo de caja está **EN CONTRA** con un déficit de S7{saldo_final:,.2f}")
 
 
 elif Ejercicio == "Ejercicio 2":
