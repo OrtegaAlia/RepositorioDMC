@@ -10,6 +10,22 @@ st.write("Elaborado por: Alia Ortega")
 
 Ejercicio = st.sidebar.selectbox("Seleccione un Ejercicio", ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"] )
 
+if Ejercicio == "Ejercicio 1":
+
+  st.write("Bienvenido al Ejercicio 1")
+
+elif Ejercicio == "Ejercicio 2":
+
+  st.write("Bienvenido al Ejercicio 2")
+
+elif Ejercicio == "Ejercicio 3":
+
+  st.write("Bienvenido al Ejercicio 3")
+
+elif Ejercicio == "Ejercicio 4":
+
+  st.write("Bienvenido al Ejercicio 4")
+
 URL_LOGO = "https://python.org"
 
 st.image(URL_LOGO, width=200, caption="Python DMC")
