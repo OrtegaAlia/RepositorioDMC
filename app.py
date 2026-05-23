@@ -11,19 +11,16 @@ st.write("Elaborado por: Alia Ortega")
 Ejercicio = st.sidebar.selectbox("Seleccione un Ejercicio", ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"] )
 
 if Ejercicio == "Ejercicio 1":
-
   st.write("Bienvenido Ejercicio 1")
+  st.image("Flujo de Caja.png")
 
 elif Ejercicio == "Ejercicio 2":
-
   st.write("Bienvenido Ejercicio 2")
 
 elif Ejercicio == "Ejercicio 3":
-
   st.write("Bienvenido Ejercicio 3")
 
 elif Ejercicio == "Ejercicio 4":
-
   st.write("Bienvenido Ejercicio 4")
 
 URL_LOGO = "https://python.org"
