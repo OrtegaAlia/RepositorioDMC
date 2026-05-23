@@ -46,7 +46,7 @@ if Ejercicio == "Ejercicio 1":
   Concepto = st.text_input("Concepto", placeholder="Ej. Pago de alquiler, Salario")
   Tipo = st.selectbox("Tipo de movimiento", ["Ingreso", "Gasto"])
   Valor = st.number_input("Valor (S/)", min_value=0.0, step=10.0, format="%.2f")
-if st.button("Agregar movimiento"):
+  if st.button("Agregar movimiento"):
     if Concepto.strip() == None:
         st.warning("Por favor, ingresa un concepto válido.")
     elif Valor <= 0:
@@ -62,7 +62,7 @@ if st.button("Agregar movimiento"):
         }
         st.session_state.movimientos.append(nuevo_movimiento)
         st.toast("Movimiento agregado con éxito")
-if st.session_state.movimientos:
+  if st.session_state.movimientos:
     df = pd.DataFrame(st.session_state.movimientos)
     st.subheader("Historial de Movimientos")
     st.dataframe(df, use_container_width=True)
