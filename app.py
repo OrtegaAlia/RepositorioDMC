@@ -34,6 +34,8 @@ Ejercicio = st.sidebar.selectbox("📋Seleccione un Ejercicio", ["Ejercicio 1","
 if Ejercicio == "Ejercicio 1":
   st.write("Bienvenido Ejercicio 1")
   st.image("Flujo de Caja.png")
+  if "lista_movimientos" not in st.session_state:
+    st.session_state.lista_movimientos = []
 
 elif Ejercicio == "Ejercicio 2":
   st.write("Bienvenido Ejercicio 2")
