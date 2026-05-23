@@ -34,8 +34,9 @@ Ejercicio = st.sidebar.selectbox("📋Seleccione un Ejercicio", ["Ejercicio 1","
 if Ejercicio == "Ejercicio 1":
   st.write("Bienvenido Ejercicio 1")
   st.image("Flujo de Caja.png")
-  if "lista_movimientos" not in st.session_state:
-  st.session_state.lista_movimientos = []
+
+if "lista_movimientos" not in st.session_state:
+st.session_state.lista_movimientos = []
 st.markdown("""
 Este módulo permite registrar de forma dinámica tus movimientos financieros. 
 Cada registro captura el concepto, tipo de operación y monto. Las transacciones se 
