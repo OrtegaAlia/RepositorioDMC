@@ -10,7 +10,7 @@ st.write("Elaborado por: Alia Ortega")
 
 st.sidebar.image("LOGO.png")
 
-st.sidebar.subheader("Módulo: Python para Analítica de Datos (Python DMC)")
+st.sidebar.subheader("Módulo 1: Fundamentos de Programación")
 
 st.sidebar.write("**Nombre Completo:** Alia Ortega Alvarado")
 st.sidebar.write("**Especialidad / Rol:** Analista de Contabilidad")
