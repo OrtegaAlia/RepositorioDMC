@@ -20,7 +20,7 @@ st.sidebar.markdown("### 📋 Descripción del Proyecto")
 
 st.sidebar.markdown("""
     Este proyecto es una aplicación interactiva diseñada para centralizar flujos de trabajo clave. 
-    Permite realizar el control de **flujos de caja**, y la gestión avanzada con **fNumpy**,
+    Permite realizar el control de **flujos de caja**, y la gestión avanzada con **Numpy**,
     así como la ejecución de cálculos financieros y operaciones **CRUD** completas mediante módulos 
     y librerías externas de Python.
     """)
