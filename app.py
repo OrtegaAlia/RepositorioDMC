@@ -6,7 +6,7 @@ URL_LOGO = "https://python.org"
 
 st.image(URL_LOGO, width=200, caption="Python DMC")
 
-st.write("Alia Ortega Alvarado")
+st.write("Elaborado por Alia Ortega")
 
 st.subheader("Módulo: Python para Analítica de Datos (Python DMC)")
 
