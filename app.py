@@ -4,7 +4,7 @@ import pandas as pd
 
 import streamlit as axes
 
-import pandas as pd
+import numpy as np
 
 st.title("Plataforma Integrada de Soluciones Financieras ")
 
