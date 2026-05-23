@@ -86,7 +86,7 @@ if Ejercicio == "Ejercicio 1":
 
 
 elif Ejercicio == "Ejercicio 2":
-  st.write("Bienvenido Ejercicio 2:Registro con NumPy y DataFrames")
+  st.write("Bienvenido Ejercicio 2: Registro con NumPy y DataFrames")
   st.image("Numpy.png")
   if "np_nombres" not in st.session_state:
     st.session_state.np_nombres = np.array([], dtype=str)
@@ -102,6 +102,23 @@ numéricas se consolidan y transforman dinámicamente en un objeto **DataFrame**
 """)
 
   st.markdown("---")
+
+  st.subheader("🛒 Formulario de Alta de Productos")
+col_nom, col_cat, col_pre, col_can = st.columns(4)
+
+with col_nom:
+    prod_nombre = st.text_input("Nombre del Producto:", placeholder="Ej. Monitor Gamer", key="np_prod_nom")
+
+with col_cat:
+    prod_categoria = st.selectbox("Categoría:", ["Electrónica", "Línea Blanca", "Oficina", "Ferretería"], key="np_prod_cat")
+
+with col_pre:
+    prod_precio = st.number_input("Precio Unitario (S/):", min_value=0.0, step=0.5, format="%.2f", key="np_prod_pre")
+
+with col_can:
+    prod_cantidad = st.number_input("Cantidad Mínima:", min_value=1, step=1, key="np_prod_can")
+
+
 
 elif Ejercicio == "Ejercicio 3":
   st.write("Bienvenido Ejercicio 3")
