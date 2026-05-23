@@ -81,8 +81,6 @@ if st.session_state.movimientos:
         st.success(f"🔴 El flujo de caja está **A FAVOR** con un saldo de ${saldo_final:,.2f}")
     else:
         st.error(f"🚨 El flujo de caja está **EN CONTRA** con un déficit de ${saldo_final:,.2f}")
-else:
-    st.info("Aún no se han registrado movimientos. Usa el formulario de arriba para empezar.")
 
 
 elif Ejercicio == "Ejercicio 2":
