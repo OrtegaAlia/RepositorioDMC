@@ -9,3 +9,5 @@ st.image(URL_LOGO, width=200, caption="Python DMC")
 st.write("Alia Ortega Alvarado")
 
 st.subheader("Módulo 1 - Fundamentos de Programación")
+
+st.sidebar.title("Parámetros")
