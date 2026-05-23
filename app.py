@@ -16,7 +16,7 @@ st.header("📋 Información del Proyecto")
 
 col1, col2 = st.columns(2)
 
-with col_datos:
+with col1:
     st.markdown("### 🧑‍💻 Información del Estudiante")
     st.write("**Nombre Completo:** Alia Ortega Alvarado")
     st.write("**Especialidad / Rol:** Analista de Contabilidad")
