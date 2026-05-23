@@ -36,7 +36,7 @@ if Ejercicio == "Ejercicio 1":
   st.image("Flujo de Caja.png")
   st.subheader("Registrar Nuevo Movimiento")
   Concepto = st.text_input("Concepto", placeholder="Ej. Pago de alquiler, Salario")
-  Tipo de Movimiento  = st.selectbox("Tipo de movimiento", ["Ingreso", "Gasto"])
+  Tipo = st.selectbox("Tipo de movimiento", ["Ingreso", "Gasto"])
   Valor = st.number_input("Valor (S/)", min_value=0.0, step=10.0, format="%.2f")
 
 elif Ejercicio == "Ejercicio 2":
