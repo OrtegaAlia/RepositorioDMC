@@ -4,6 +4,8 @@ import pandas as pd
 
 import streamlit as axes
 
+import pandas as pd
+
 st.title("Plataforma Integrada de Soluciones Financieras ")
 
 st.sidebar.title("Parámetros")
@@ -84,8 +86,22 @@ if Ejercicio == "Ejercicio 1":
 
 
 elif Ejercicio == "Ejercicio 2":
-  st.write("Bienvenido Ejercicio 2")
+  st.write("Bienvenido Ejercicio 2:Registro con NumPy y DataFrames")
   st.image("Numpy.png")
+  if "np_nombres" not in st.session_state:
+    st.session_state.np_nombres = np.array([], dtype=str)
+    st.session_state.np_categorias = np.array([], dtype=str)
+    st.session_state.np_precios = np.array([], dtype=float)
+    st.session_state.np_cantidades = np.array([], dtype=int)
+    st.session_state.np_totales = np.array([], dtype=float)
+  st.markdown("""
+Este módulo implementa un formulario de control y registro de inventario automatizado. 
+A diferencia del almacenamiento clásico, los datos capturados se procesan vectorialmente 
+mediante arreglos unidimensionales de **NumPy**. Al confirmar la operación, las estructuras 
+numéricas se consolidan y transforman dinámicamente en un objeto **DataFrame** indexado.
+""")
+
+  st.markdown("---")
 
 elif Ejercicio == "Ejercicio 3":
   st.write("Bienvenido Ejercicio 3")
