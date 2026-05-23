@@ -50,7 +50,7 @@ if st.button("Agregar movimiento"):
     elif valor <= 0:
         st.warning("El valor debe ser mayor a cero.")
     else:
-         nuevo_movimiento = {
+        nuevo_movimiento = {
             "Concepto": concepto,
             "Tipo": tipo,
             "Valor": valor
