@@ -8,6 +8,8 @@ st.sidebar.title("Parámetros")
 
 st.write("Elaborado por: Alia Ortega")
 
+st.sidebar.image("LOGO.png")
+
 Ejercicio = st.sidebar.selectbox("Seleccione un Ejercicio", ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"] )
 
 if Ejercicio == "Ejercicio 1":
