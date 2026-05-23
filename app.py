@@ -62,7 +62,10 @@ if st.button("Agregar movimiento"):
         }
         st.session_state.movimientos.append(nuevo_movimiento)
         st.toast("Movimiento agregado con éxito")
-
+if st.session_state.movimientos:
+    df = pd.DataFrame(st.session_state.movimientos)
+    st.subheader("Historial de Movimientos")
+    st.dataframe(df, use_container_width=True)
 
 
 elif Ejercicio == "Ejercicio 2":
