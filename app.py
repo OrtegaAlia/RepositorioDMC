@@ -16,7 +16,7 @@ st.sidebar.write("**Nombre Completo:** Alia Ortega Alvarado")
 st.sidebar.write("**Especialidad / Rol:** Analista de Contabilidad")
 st.sidebar.write("**Año Académico:** 2026")
 
- st.sidebar.markdown("### 📋 Descripción del Proyecto")
+st.sidebar.markdown("### 📋 Descripción del Proyecto")
 
 st.sidebar.markdown("""
     Este proyecto es una aplicación interactiva diseñada para centralizar flujos de trabajo clave. 
