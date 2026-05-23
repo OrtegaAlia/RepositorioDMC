@@ -47,7 +47,7 @@ if Ejercicio == "Ejercicio 1":
   Tipo = st.selectbox("Tipo de movimiento", ["Ingreso", "Gasto"])
   Valor = st.number_input("Valor (S/)", min_value=0.0, step=10.0, format="%.2f")
 if st.button("Agregar movimiento"):
-    if concepto.strip() == none:
+    if concepto.strip() == None:
         st.warning("Por favor, ingresa un concepto válido.")
     elif valor <= 0:
         st.warning("El valor debe ser mayor a cero.")
