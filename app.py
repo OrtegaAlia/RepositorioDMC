@@ -118,6 +118,24 @@ numéricas se consolidan y transforman dinámicamente en un objeto **DataFrame**
   with col_can:
       prod_cantidad = st.number_input("Cantidad Mínima:", min_value=1, step=1, key="np_prod_can")
 
+  if st.button("Agregar Nuevo Registro", type="primary", use_container_width=True):
+    if prod_nombre.strip() == "":
+        st.warning("⚠️ Ingrese un nombre válido para el producto antes de continuar.")
+    elif prod_precio <= 0:
+        st.warning("⚠️ El precio unitario asignado debe ser mayor a cero.")
+    else:
+        prod_total = prod_precio * prod_cantidad
+        
+        st.session_state.np_nombres = np.append(st.session_state.np_nombres, prod_nombre)
+        st.session_state.np_categorias = np.append(st.session_state.np_categorias, prod_categoria)
+        st.session_state.np_precios = np.append(st.session_state.np_precios, prod_precio)
+        st.session_state.np_cantidades = np.append(st.session_state.np_cantidades, prod_cantidad)
+        st.session_state.np_totales = np.append(st.session_state.np_totales, prod_total)
+        
+        st.success(f"✅ ¡Producto '{prod_nombre}' registrado y transformado en array NumPy!")
+
+  st.markdown("---")
+
 
 
 elif Ejercicio == "Ejercicio 3":
