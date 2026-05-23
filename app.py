@@ -1,16 +1,18 @@
 import streamlit as st
 
+import pandas as pd
+
 st.title("Plataforma Integrada de Soluciones Financieras ")
+
+st.sidebar.title("Parámetros")
+
+st.write("Elaborado por: Alia Ortega")
 
 URL_LOGO = "https://python.org"
 
 st.image(URL_LOGO, width=200, caption="Python DMC")
 
-st.write("Elaborado por Alia Ortega")
-
 st.subheader("Módulo: Python para Analítica de Datos (Python DMC)")
-
-st.sidebar.title("Parámetros")
 
 st.header("📋 Información del Proyecto")
 
