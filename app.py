@@ -17,8 +17,8 @@ st.sidebar.write("**Especialidad / Rol:** Analista de Contabilidad")
 st.sidebar.write("**Año Académico:** 2026")
 
 st.sidebar.markdown("Este proyecto es una aplicación interactiva diseñada para centralizar flujos de trabajo clave. 
-   Permite realizar el control de **flujos de caja**, la gestión avanzada con **NumPy**, así como la ejecución de cálculos financieros
-   y operaciones **CRUD** completas mediante módulos y librerías externas de Python.")
+      Permite realizar el control de **flujos de caja**, la gestión avanzada con **NumPy**, así como la ejecución de cálculos financieros
+      y operaciones **CRUD** completas mediante módulos y librerías externas de Python.")
 
 st.sidebar.write("Streamlit, NumPy, arrays, DataFrame y Pandas")
 
