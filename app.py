@@ -136,14 +136,33 @@ numéricas se consolidan y transforman dinámicamente en un objeto **DataFrame**
 
   st.markdown("---")
 
+  st.subheader("📋 Tabla General de Inventario Actualizada")
+
+  if len(st.session_state.np_nombres) > 0:
+
+    df_inventario = pd.DataFrame({
+        "Nombre del Producto": st.session_state.np_nombres,
+        "Categoría": st.session_state.np_categorias,
+        "Precio (S/)": st.session_state.np_precios,
+        "Cantidad": st.session_state.np_cantidades,
+        "Total (S/)": st.session_state.np_totales
+    })
+    
+    st.dataframe(df_inventario, use_container_width=True)
+    
+    total_invertido = np.sum(st.session_state.np_totales)
+    total_articulos = np.sum(st.session_state.np_cantidades)
+    st.info(f"💡 **Resumen operativo:** Contamos con {total_articulos} artículos en bodega, representando un valor de inversión total de S/ {total_invertido:,.2f}")
+  else:
+    st.info("💡 No existen registros vectoriales almacenados. Use el formulario superior para añadir artículos.")
 
 
 elif Ejercicio == "Ejercicio 3":
-  st.write("Bienvenido Ejercicio 3")
-  st.image("Libreria.png")
+   st.write("Bienvenido Ejercicio 3")
+   st.image("Libreria.png")
 
 elif Ejercicio == "Ejercicio 4":
-  st.write("Bienvenido Ejercicio 4")
-  st.image("Crud.png")
+   st.write("Bienvenido Ejercicio 4")
+   st.image("Crud.png")
 
 
