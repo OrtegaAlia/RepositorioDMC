@@ -43,11 +43,11 @@ if Ejercicio == "Ejercicio 1":
   if "movimientos" not in st.session_state:
     st.session_state.movimientos = []
   st.subheader("Registrar Nuevo Movimiento")
-  Concepto = st.text_input("Concepto", placeholder="Ej. Pago de alquiler, Salario")
+  Concepto = st.text_input("Ingresa el concepto")
   Tipo = st.selectbox("Tipo de movimiento", ["Ingreso", "Gasto"])
   Valor = st.number_input("Valor (S/)", min_value=0.0, step=10.0, format="%.2f")
 if st.button("Agregar movimiento"):
-    if concepto.strip() == ""
+    if concepto.strip() == "":
         st.warning("Por favor, ingresa un concepto válido.")
     elif valor <= 0:
         st.warning("El valor debe ser mayor a cero.")
