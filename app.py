@@ -32,7 +32,7 @@ st.sidebar.write("Streamlit, NumPy, arrays, DataFrame y Pandas")
 Ejercicio = st.sidebar.selectbox("📋Seleccione un Ejercicio", ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"] )
 
 if Ejercicio == "Ejercicio 1":
-  st.write("Bienvenido Ejercicio 1")
+  st.write("Bienvenido Ejercicio 1: Flujo de Caja con listas")
   st.image("Flujo de Caja.png")
 
 elif Ejercicio == "Ejercicio 2":
