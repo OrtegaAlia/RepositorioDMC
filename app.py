@@ -23,10 +23,6 @@ elif Ejercicio == "Ejercicio 3":
 elif Ejercicio == "Ejercicio 4":
   st.write("Bienvenido Ejercicio 4")
 
-URL_LOGO = "https://python.org"
-
-st.image(URL_LOGO, width=200, caption="Python DMC")
-
 st.subheader("Módulo: Python para Analítica de Datos (Python DMC)")
 
 st.header("📋 Información del Proyecto")
