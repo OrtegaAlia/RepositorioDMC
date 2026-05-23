@@ -38,6 +38,8 @@ if Ejercicio == "Ejercicio 1":
     Esta aplicación permite registrar tus movimientos financieros diarios. 
     Ingresa el concepto, el tipo de movimiento y el valor para calcular tu saldo final.
     """)
+  if "movimientos" not in st.session_state:
+    st.session_state.movimientos = []
   st.subheader("Registrar Nuevo Movimiento")
   Concepto = st.text_input("Concepto", placeholder="Ej. Pago de alquiler, Salario")
   Tipo = st.selectbox("Tipo de movimiento", ["Ingreso", "Gasto"])
