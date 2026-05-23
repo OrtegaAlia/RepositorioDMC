@@ -12,19 +12,19 @@ Ejercicio = st.sidebar.selectbox("Seleccione un Ejercicio", ["Ejercicio 1","Ejer
 
 if Ejercicio == "Ejercicio 1":
 
-  st.write("Bienvenido al Ejercicio 1")
+  st.write("Bienvenido Ejercicio 1")
 
 elif Ejercicio == "Ejercicio 2":
 
-  st.write("Bienvenido al Ejercicio 2")
+  st.write("Bienvenido Ejercicio 2")
 
 elif Ejercicio == "Ejercicio 3":
 
-  st.write("Bienvenido al Ejercicio 3")
+  st.write("Bienvenido Ejercicio 3")
 
 elif Ejercicio == "Ejercicio 4":
 
-  st.write("Bienvenido al Ejercicio 4")
+  st.write("Bienvenido Ejercicio 4")
 
 URL_LOGO = "https://python.org"
 
