@@ -35,12 +35,6 @@ if Ejercicio == "Ejercicio 1":
   st.write("Bienvenido Ejercicio 1")
   st.image("Flujo de Caja.png")
 
-st.markdown("""
-Esta aplicación permite registrar tus movimientos financieros diarios. 
-Ingresa el concepto, el tipo de movimiento y el valor para calcular tu saldo final.
-""")
-
-
 elif Ejercicio == "Ejercicio 2":
   st.write("Bienvenido Ejercicio 2")
   st.image("Numpy.png")
