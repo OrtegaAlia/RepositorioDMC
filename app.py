@@ -106,16 +106,16 @@ numéricas se consolidan y transforman dinámicamente en un objeto **DataFrame**
   st.subheader("🛒 Formulario de Alta de Productos")
   col_nom, col_cat, col_pre, col_can = st.columns(4)
 
-    with col_nom:
+  with col_nom:
       prod_nombre = st.text_input("Nombre del Producto:", placeholder="Ej. Monitor Gamer", key="np_prod_nom")
 
-    with col_cat:
+  with col_cat:
       prod_categoria = st.selectbox("Categoría:", ["Electrónica", "Línea Blanca", "Oficina", "Ferretería"], key="np_prod_cat")
 
-    with col_pre:
+  with col_pre:
       prod_precio = st.number_input("Precio Unitario (S/):", min_value=0.0, step=0.5, format="%.2f", key="np_prod_pre")
 
-    with col_can:
+  with col_can:
       prod_cantidad = st.number_input("Cantidad Mínima:", min_value=1, step=1, key="np_prod_can")
 
 
