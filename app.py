@@ -2,6 +2,8 @@ import streamlit as st
 
 import pandas as pd
 
+import streamlit as axes
+
 st.title("Plataforma Integrada de Soluciones Financieras ")
 
 st.sidebar.title("Parámetros")
