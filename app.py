@@ -18,12 +18,15 @@ if Ejercicio == "Ejercicio 1":
 
 elif Ejercicio == "Ejercicio 2":
   st.write("Bienvenido Ejercicio 2")
+  st.image("Numpy.png")
 
 elif Ejercicio == "Ejercicio 3":
   st.write("Bienvenido Ejercicio 3")
+  st.image("Libreria.png")
 
 elif Ejercicio == "Ejercicio 4":
   st.write("Bienvenido Ejercicio 4")
+  st.image("Crud.png")
 
 st.subheader("Módulo: Python para Analítica de Datos (Python DMC)")
 
