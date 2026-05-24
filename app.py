@@ -6,7 +6,7 @@ import streamlit as axes
 
 import numpy as np
 
-st.title("Plataforma Integrada de Soluciones Financieras ")
+st.title("Mi Primera Aplicación en Python ")
 
 st.sidebar.title("Parámetros")
 
@@ -253,5 +253,3 @@ elif Ejercicio == "Ejercicio 4":
     from libreria_clases_proyecto1 import libreria_clases_proyecto1
    except Exception:
     
-
-
