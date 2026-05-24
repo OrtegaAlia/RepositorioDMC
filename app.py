@@ -212,6 +212,13 @@ en una tabla histórica matricial.
         step=1, 
         key="fn_p3"
     )
+   if st.button("Ejecutar Operación Externa", type="primary", use_container_width=True):
+    if param_capital <= 0 or param_tasa <= 0:
+        st.warning("⚠️ Los parámetros numéricos de cálculo deben ser mayores a cero.")
+    else:
+        resultado_calculo = calcular_interes_compuesto(param_capital, param_tasa, param_periodos)
+        st.markdown("#### 🎯 Resultado Obtenido de la Librería:")
+        st.write(f"El valor de retorno procesado por el algoritmo es: **S/ {resultado_calculo:,.2f}**")
 
 
 elif Ejercicio == "Ejercicio 4":
