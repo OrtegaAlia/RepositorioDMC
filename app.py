@@ -167,7 +167,7 @@ elif Ejercicio == "Ejercicio 3":
         return round(capital * (1 + (tasa / 100)) ** periodos, 2)
     if "historico_funciones" not in st.session_state:
         st.session_state.historico_funciones = pd.DataFrame(columns=[
-        "Función Ejecutada", "Parámetro 1", "Parámetro 2", "Parámetro 3", "Resultado Final"
+        "Área", "Capital", "tasa de Interes", "Periodo", "Resultado Final"
         ])
     st.markdown("""
 Este módulo conecta la interfaz gráfica de Streamlit con algoritmos alojados en el archivo 
