@@ -240,7 +240,7 @@ en una tabla histórica matricial.
         st.dataframe(st.session_state.historico_funciones, use_container_width=True)
         if st.button("Limpiar Histórico de Auditoría"):
             st.session_state.historico_funciones = pd.DataFrame(columns=[
-            "Función Ejecutada", "Parámetro 1", "Parámetro 2", "Parámetro 3", "Resultado Final"
+            "Área", "Capital", "Tasa de Interes", "Periodo", "Resultado Final"
             ])
             st.rerun()
     else:
