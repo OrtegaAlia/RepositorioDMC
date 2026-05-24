@@ -162,10 +162,9 @@ elif Ejercicio == "Ejercicio 3":
    st.image("Libreria.png")
    try:
     from libreria_funciones_proyecto1 import calcular_interes_compuesto
-   except ModuleNotFoundError:
+   except Exception:
     def calcular_interes_compuesto(capital: float, tasa: float, periodos: int) -> float:
         return round(capital * (1 + (tasa / 100)) ** periodos, 2)
-
 
 
 elif Ejercicio == "Ejercicio 4":
