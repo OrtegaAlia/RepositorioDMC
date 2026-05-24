@@ -268,8 +268,8 @@ elif Ejercicio == "Ejercicio 4":
             return round(self.stock * self.precio, 2)
     if "crud_datos" not in st.session_state:
         st.session_state.crud_datos = pd.DataFrame([
-        {"ID": 101, "Nombre": "Teclado Mecánico", "Stock": 15, "Precio": 85.0, "Total ($)": 1275.0},
-        {"ID": 102, "Nombre": "Audífonos Inalámbricos", "Stock": 22, "Precio": 60.0, "Total ($)": 1320.0}
+        {"ID": 101, "Nombre": "Teclado Mecánico", "Stock": 15, "Precio": 85.0, "Total (S/)": 1275.0},
+        {"ID": 102, "Nombre": "Audífonos Inalámbricos", "Stock": 22, "Precio": 60.0, "Total (S/)": 1320.0}
         ])
     st.markdown("""
 Este módulo conecta la interfaz gráfica de Streamlit con la clase estructurada `ProductoInventario` 
@@ -295,7 +295,7 @@ y revocar registros del sistema.
             c_nombre = st.text_input("Nombre comercial del producto:", placeholder="Ej. Memoria RAM 16GB", key="crud_c_nom")
         with col_c2:
             c_stock = st.number_input("Cantidad física en almacén (Stock):", min_value=0, step=1, value=10, key="crud_c_stk")
-            c_precio = st.number_input("Costo comercial unitario ($):", min_value=0.0, step=1.0, value=45.0, format="%.2f", key="crud_c_prc")
+            c_precio = st.number_input("Costo comercial unitario (S/):", min_value=0.0, step=1.0, value=45.0, format="%.2f", key="crud_c_prc")
 
         if st.button("Guardar e Instanciar Objeto", type="primary", key="btn_crud_create"):
            if c_nombre.strip() == "":
@@ -310,7 +310,7 @@ y revocar registros del sistema.
                     "Nombre": nuevo_objeto.nombre,
                     "Stock": nuevo_objeto.stock,
                     "Precio": nuevo_objeto.precio,
-                    "Total ($)": nuevo_objeto.calcular_valor_total()
+                    "Total (S/)": nuevo_objeto.calcular_valor_total()
                 }])
             
                st.session_state.crud_datos = pd.concat([st.session_state.crud_datos, nueva_fila], ignore_index=True)
