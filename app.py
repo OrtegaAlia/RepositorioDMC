@@ -234,6 +234,17 @@ en una tabla histórica matricial.
         st.success("✅ Operación completada. Datos añadidos al listado histórica.")
 
     st.markdown("---")
+    st.subheader("📜 Histórico de Cálculos y Resultados")
+
+    if not st.session_state.historico_funciones.empty:
+        st.dataframe(st.session_state.historico_funciones, use_container_width=True)
+        if st.button("Limpiar Histórico de Auditoría"):
+            st.session_state.historico_funciones = pd.DataFrame(columns=[
+            "Función Ejecutada", "Parámetro 1", "Parámetro 2", "Parámetro 3", "Resultado Final"
+            ])
+            st.rerun()
+     else:
+         st.info("💡 La tabla histórica está vacía. Configure los parámetros superiores y ejecute la función.")
 
 elif Ejercicio == "Ejercicio 4":
    st.write("Bienvenido Ejercicio 4")
