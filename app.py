@@ -205,7 +205,7 @@ en una tabla histórica matricial.
 
    with col_p3:
     param_periodos = st.number_input(
-        "Horas / Períodos de Tiempo (Años):", 
+        "Períodos de Tiempo (Años):", 
         min_value=1, 
         max_value=100, 
         value=5, 
