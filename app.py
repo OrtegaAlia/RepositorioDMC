@@ -335,7 +335,7 @@ y revocar registros del sistema.
             key="crud_u_sb"
             )
         
-           datos_actuales = st.session_state.crud_datos[st.session_state.crud_datos["ID"] == id_a_modificar].iloc[0]
+            datos_actuales = st.session_state.crud_datos[st.session_state.crud_datos["ID"] == id_a_modificar].iloc[0]
         
            col_u1, col_u2 = st.columns(2)
            with col_u1:
