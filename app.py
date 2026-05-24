@@ -267,9 +267,9 @@ elif Ejercicio == "Ejercicio 4":
         def calcular_valor_total(self):
             return round(self.stock * self.precio, 2)
     if "crud_datos" not in st.session_state:
-    st.session_state.crud_datos = pd.DataFrame([
+        st.session_state.crud_datos = pd.DataFrame([
         {"ID": 101, "Nombre": "Teclado Mecánico", "Stock": 15, "Precio": 85.0, "Total ($)": 1275.0},
         {"ID": 102, "Nombre": "Audífonos Inalámbricos", "Stock": 22, "Precio": 60.0, "Total ($)": 1320.0}
-    ])
+        ])
 
     
