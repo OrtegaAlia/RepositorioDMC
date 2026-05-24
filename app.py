@@ -212,7 +212,7 @@ en una tabla histórica matricial.
         step=1, 
         key="fn_p3"
     )
-   if st.button("Ejecutar Operación Externa", type="primary", use_container_width=True):
+   if st.button("Ejecutar Operación", type="primary", use_container_width=True):
     if param_capital <= 0 or param_tasa <= 0:
         st.warning("⚠️ Los parámetros numéricos de cálculo deben ser mayores a cero.")
     else:
@@ -221,17 +221,17 @@ en una tabla histórica matricial.
         st.write(f"El valor de retorno procesado por el algoritmo es: **S/ {resultado_calculo:,.2f}**")
         nueva_fila = pd.DataFrame([{
             "Función Ejecutada": funcion_seleccionada,
-            "Parámetro 1": f"Capital: ${param_capital:,.2f}",
+            "Parámetro 1": f"Capital: S/{param_capital:,.2f}",
             "Parámetro 2": f"Tasa: {param_tasa}%",
             "Parámetro 3": f"Períodos: {param_periodos}",
-            "Resultado Final": f"$ {resultado_calculo:,.2f}"
+            "Resultado Final": f"S/ {resultado_calculo:,.2f}"
         }])
         
         st.session_state.historico_funciones = pd.concat(
             [st.session_state.historico_funciones, nueva_fila], 
             ignore_index=True
         )
-        st.success("✅ Operación completada. Datos añadidos a la bitácora histórica.")
+        st.success("✅ Operación completada. Datos añadidos al listado histórica.")
 
     st.markdown("---")
 
