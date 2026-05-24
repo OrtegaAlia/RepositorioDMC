@@ -361,3 +361,22 @@ y revocar registros del sistema.
                    st.rerun()
         else:
             st.info("💡 Operación no disponible: Base de datos sin registros.")
+            
+    with tab_eliminar:
+        st.subheader("❌ Remoción de Registros de Inventario")
+    
+        if not st.session_state.crud_datos.empty:
+            id_a_eliminar = st.selectbox(
+                "Seleccione el código ID del artículo a remover del sistema:", 
+                 st.session_state.crud_datos["ID"].values, 
+                 key="crud_d_sb"
+            )
+        
+            st.warning(f"⚠️ Atención: Al presionar el botón inferior se borrará permanentemente el registro asociado al ID {id_a_eliminar}.")
+        
+            if st.button("Eliminar Registro Permanentemente", key="btn_crud_delete"):
+                st.session_state.crud_datos = st.session_state.crud_datos[st.session_state.crud_datos["ID"] != id_a_eliminar]
+                st.success(f"🗑️ Registro con ID {id_a_eliminar} purgado del sistema con éxito.")
+                st.rerun()
+        else:
+            st.info("💡 Operación no disponible: Base de datos sin registros.")
