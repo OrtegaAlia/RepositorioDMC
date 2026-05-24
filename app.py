@@ -316,3 +316,13 @@ y revocar registros del sistema.
                st.session_state.crud_datos = pd.concat([st.session_state.crud_datos, nueva_fila], ignore_index=True)
                st.success(f"✅ Objeto de clase instanciado correctamente: '{nuevo_objeto.nombre}' guardado.")
 
+    with tab_leer:
+        st.subheader("📊 Registros Vigentes en el Sistema")
+    
+        if not st.session_state.crud_datos.empty:
+            st.dataframe(st.session_state.crud_datos, use_container_width=True)
+            valor_inventario = st.session_state.crud_datos["Total (S/)"].sum()
+            st.info(f"💰 **Valor Capitalizado:** La tasación global del inventario actual asciende a: S/ {valor_inventario:,.2f}")
+        else:
+            st.info("💡 El repositorio se encuentra vacío. Registre un artículo en la primera pestaña.")
+
