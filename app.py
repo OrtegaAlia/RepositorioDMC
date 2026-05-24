@@ -8,7 +8,7 @@ import numpy as np
 
 import libreria_funciones_proyecto1 as al
 
-import librería_clases_proyecto1 as ao
+import librería_clases_proyecto1 as lf
 
 st.title("Mi Primera Aplicación en Python ")
 
