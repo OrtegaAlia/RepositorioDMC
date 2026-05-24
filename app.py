@@ -177,6 +177,11 @@ en una tabla histórica matricial.
 """)
 
    st.markdown("---")
+   st.subheader("⚙️ Configuración y Parámetros de Entrada")
+funcion_seleccionada = st.selectbox(
+    "Seleccione la función analítica a ejecutar:",
+    ["Calcular Interés Compuesto (Área: Finanzas / Proyectos)"]
+)
 
 
 elif Ejercicio == "Ejercicio 4":
