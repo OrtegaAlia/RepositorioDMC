@@ -251,6 +251,7 @@ elif Ejercicio == "Ejercicio 4":
    st.image("Crud.png")
    try:
     from libreria_clases_proyecto1 import libreria_clases_proyecto1
+   except Exception:
    
 
 
