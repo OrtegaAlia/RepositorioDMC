@@ -337,28 +337,28 @@ y revocar registros del sistema.
         
             datos_actuales = st.session_state.crud_datos[st.session_state.crud_datos["ID"] == id_a_modificar].iloc[0]
         
-           col_u1, col_u2 = st.columns(2)
-           with col_u1:
-               u_nombre = st.text_input("Modificar Nombre:", value=datos_actuales["Nombre"], key="crud_u_nom")
-               u_precio = st.number_input("Modificar Precio ($):", value=float(datos_actuales["Precio"]), min_value=0.0, format="%.2f", key="crud_u_prc")
-           with col_u2:
-               u_stock = st.number_input("Modificar Stock:", value=int(datos_actuales["Stock"]), min_value=0, key="crud_u_stk")
+            col_u1, col_u2 = st.columns(2)
+            with col_u1:
+                u_nombre = st.text_input("Modificar Nombre:", value=datos_actuales["Nombre"], key="crud_u_nom")
+                u_precio = st.number_input("Modificar Precio ($):", value=float(datos_actuales["Precio"]), min_value=0.0, format="%.2f", key="crud_u_prc")
+            with col_u2:
+                u_stock = st.number_input("Modificar Stock:", value=int(datos_actuales["Stock"]), min_value=0, key="crud_u_stk")
             
-           if st.button("Confirmar Cambios Operativos", key="btn_crud_update"):
-              if u_nombre.strip() == "":
-                  st.warning("⚠️ El nombre no puede quedar vacío.")
-              else:
-                  indice = st.session_state.crud_datos[st.session_state.crud_datos["ID"] == id_a_modificar].index
+            if st.button("Confirmar Cambios Operativos", key="btn_crud_update"):
+               if u_nombre.strip() == "":
+                   st.warning("⚠️ El nombre no puede quedar vacío.")
+               else:
+                   indice = st.session_state.crud_datos[st.session_state.crud_datos["ID"] == id_a_modificar].index
                 
-                  objeto_actualizado = ProductoInventario(id_a_modificar, u_nombre, u_stock, u_precio)
+                   objeto_actualizado = ProductoInventario(id_a_modificar, u_nombre, u_stock, u_precio)
                 
-                  st.session_state.crud_datos.loc[indice, "Nombre"] = objeto_actualizado.nombre
-                  st.session_state.crud_datos.loc[indice, "Stock"] = objeto_actualizado.stock
-                  st.session_state.crud_datos.loc[indice, "Precio"] = objeto_actualizado.precio
-                  st.session_state.crud_datos.loc[indice, "Total ($)"] = objeto_actualizado.calcular_valor_total()
+                   st.session_state.crud_datos.loc[indice, "Nombre"] = objeto_actualizado.nombre
+                   st.session_state.crud_datos.loc[indice, "Stock"] = objeto_actualizado.stock
+                   st.session_state.crud_datos.loc[indice, "Precio"] = objeto_actualizado.precio
+                   st.session_state.crud_datos.loc[indice, "Total ($)"] = objeto_actualizado.calcular_valor_total()
                 
-                  st.success(f"🎉 Registro con ID {id_a_modificar} actualizado exitosamente.")
-                  st.rerun()
-    else:
-        st.info("💡 Operación no disponible: Base de datos sin registros.")
+                   st.success(f"🎉 Registro con ID {id_a_modificar} actualizado exitosamente.")
+                   st.rerun()
+     else:
+         st.info("💡 Operación no disponible: Base de datos sin registros.")
 
