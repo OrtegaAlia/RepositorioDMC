@@ -12,26 +12,26 @@ st.sidebar.title("Parámetros")
 
 st.write("Elaborado por: Alia Ortega")
 
-st.sidebar.image("LOGO.png")
+st.image("LOGO.png")
 
-st.sidebar.subheader("Módulo 1: Fundamentos de Programación")
+st.subheader("Módulo 1: Fundamentos de Programación")
 
 st.sidebar.write("**Nombre Completo:** Alia Ortega Alvarado")
 st.sidebar.write("**Especialidad / Rol:** Analista de Contabilidad")
 st.sidebar.write("**Año Académico:** 2026")
 
-st.sidebar.markdown("### 📋 Descripción del Proyecto")
+st.markdown("### 📋 Descripción del Proyecto")
 
-st.sidebar.markdown("""
+st.markdown("""
     Este proyecto es una aplicación interactiva diseñada para centralizar flujos de trabajo clave. 
     Permite realizar el control de **flujos de caja**, y la gestión avanzada con **Numpy**,
     así como la ejecución de cálculos financieros y operaciones **CRUD** completas mediante módulos 
     y librerías externas de Python.
     """)
 
-st.sidebar.markdown("### 🛠️ Tecnologías Utilizadas")
+st.markdown("### 🛠️ Tecnologías Utilizadas")
 
-st.sidebar.write("Streamlit, NumPy, arrays, DataFrame y Pandas")
+st.write("Streamlit, NumPy, arrays, DataFrame y Pandas")
 
 Ejercicio = st.sidebar.selectbox("📋Seleccione un Ejercicio", ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"] )
 
