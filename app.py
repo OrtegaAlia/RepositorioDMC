@@ -22,8 +22,6 @@ with col1:
  st.write("**Nombre Completo:** Alia Ortega Alvarado")
  st.write("**Especialidad / Rol:** Analista de Contabilidad")
  st.write("**Año Académico:** 2026")
-
-with col2:
  st.markdown("### 📋 Descripción del Proyecto")
  st.markdown("""
     Este proyecto es una aplicación interactiva diseñada para centralizar flujos de trabajo clave. 
@@ -31,9 +29,11 @@ with col2:
     así como la ejecución de cálculos financieros y operaciones **CRUD** completas mediante módulos 
     y librerías externas de Python.
     """)
- st.markdown("### 🛠️ Tecnologías Utilizadas")
 
- st.write("Streamlit, NumPy, arrays, DataFrame y Pandas")
+ with col2:
+  st.markdown("### 🛠️ Tecnologías Utilizadas")
+
+  st.write("Streamlit, NumPy, arrays, DataFrame y Pandas")
 
 Ejercicio = st.sidebar.selectbox("📋Seleccione un Ejercicio", ["Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"] )
 
