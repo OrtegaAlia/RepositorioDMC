@@ -247,7 +247,10 @@ en una tabla histórica matricial.
          st.info("💡 La tabla histórica está vacía. Configure los parámetros superiores y ejecute la función.")
 
 elif Ejercicio == "Ejercicio 4":
-   st.write("Bienvenido Ejercicio 4")
+   st.write("Bienvenido Ejercicio 4: Uso de clases desde una librería externa con CRUD")
    st.image("Crud.png")
+   try:
+    from libreria_clases_proyecto1 import libreria_clases_proyecto1
+   
 
 
