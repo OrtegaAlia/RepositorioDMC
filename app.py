@@ -221,9 +221,9 @@ en una tabla histórica matricial.
         st.write(f"El valor de retorno procesado por el algoritmo es: **S/ {resultado_calculo:,.2f}**")
         nueva_fila = pd.DataFrame([{
             "Área": funcion_seleccionada,
-            "Capital": f"Capital: S/{param_capital:,.2f}",
-            "Tasa de Interes": f"Tasa: {param_tasa}%",
-            "Periodo": f"Períodos: {param_periodos}",
+            "Capital": f" S/{param_capital:,.2f}",
+            "Tasa de Interes": f" {param_tasa}%",
+            "Periodo": f" {param_periodos}",
             "Resultado Final": f"S/ {resultado_calculo:,.2f}"
         }])
         
