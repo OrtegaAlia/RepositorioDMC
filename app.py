@@ -158,11 +158,11 @@ numéricas se consolidan y transforman dinámicamente en un objeto **DataFrame**
 
 
 elif Ejercicio == "Ejercicio 3":
-   st.write("Bienvenido Ejercicio 3")
+   st.write("Bienvenido Ejercicio 3: Uso de funciones desde una librería externa")
    st.image("Libreria.png")
    try:
     from libreria_funciones_proyecto1 import calcular_interes_compuesto
-except ModuleNotFoundError:
+   except ModuleNotFoundError:
     def calcular_interes_compuesto(capital: float, tasa: float, periodos: int) -> float:
         return round(capital * (1 + (tasa / 100)) ** periodos, 2)
 
