@@ -286,3 +286,33 @@ y revocar registros del sistema.
     "🔄 Actualizar Atributos (Update)", 
     "❌ Eliminar Registro (Delete)"
      ])
+    with tab_crear:
+    st.subheader("📝 Registrar Nuevo Objeto en Inventario")
+    
+    col_c1, col_c2 = st.columns(2)
+    with col_c1:
+        c_id = st.number_input("Asignar ID único del artículo:", min_value=1, step=1, value=103, key="crud_c_id")
+        c_nombre = st.text_input("Nombre comercial del producto:", placeholder="Ej. Memoria RAM 16GB", key="crud_c_nom")
+    with col_c2:
+        c_stock = st.number_input("Cantidad física en almacén (Stock):", min_value=0, step=1, value=10, key="crud_c_stk")
+        c_precio = st.number_input("Costo comercial unitario ($):", min_value=0.0, step=1.0, value=45.0, format="%.2f", key="crud_c_prc")
+
+    if st.button("Guardar e Instanciar Objeto", type="primary", key="btn_crud_create"):
+        if c_nombre.strip() == "":
+            st.warning("⚠️ El nombre del artículo es obligatorio.")
+        elif c_id in st.session_state.crud_datos["ID"].values:
+            st.error(f"⚠️ Error de duplicidad: El ID {c_id} ya se encuentra registrado.")
+        else:
+            nuevo_objeto = ProductoInventario(c_id, c_nombre, c_stock, c_precio)
+            
+            nueva_fila = pd.DataFrame([{
+                "ID": nuevo_objeto.id,
+                "Nombre": nuevo_objeto.nombre,
+                "Stock": nuevo_objeto.stock,
+                "Precio": nuevo_objeto.precio,
+                "Total ($)": nuevo_objeto.calcular_valor_total()
+            }])
+            
+            st.session_state.crud_datos = pd.concat([st.session_state.crud_datos, nueva_fila], ignore_index=True)
+            st.success(f"✅ Objeto de clase instanciado correctamente: '{nuevo_objeto.nombre}' guardado.")
+
