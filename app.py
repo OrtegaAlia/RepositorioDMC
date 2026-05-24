@@ -166,9 +166,9 @@ elif Ejercicio == "Ejercicio 3":
     def calcular_interes_compuesto(capital: float, tasa: float, periodos: int) -> float:
         return round(capital * (1 + (tasa / 100)) ** periodos, 2)
     if "historico_funciones" not in st.session_state:
-    st.session_state.historico_funciones = pd.DataFrame(columns=[
+        st.session_state.historico_funciones = pd.DataFrame(columns=[
         "Función Ejecutada", "Parámetro 1", "Parámetro 2", "Parámetro 3", "Resultado Final"
-    ])
+        ])
 
 
 elif Ejercicio == "Ejercicio 4":
