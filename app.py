@@ -348,9 +348,9 @@ y revocar registros del sistema.
                if u_nombre.strip() == "":
                    st.warning("⚠️ El nombre no puede quedar vacío.")
                else:
-                   indice = st.session_state.crud_datos[st.session_state.crud_datos["ID"] == id_a_modificar].index
+                   indice = st.session_state.crud_datos[st.session_state.crud_datos["ID"] == id_a_modificar].index   
                 
-                   objeto_actualizado = ProductoInventario(id_a_modificar, u_nombre, u_stock, u_precio)
+                   objeto_actualizado = ProductoInventario(id_a_modificar, u_nombre, u_stock, u_precio)                                                 
                 
                    st.session_state.crud_datos.loc[indice, "Nombre"] = objeto_actualizado.nombre
                    st.session_state.crud_datos.loc[indice, "Stock"] = objeto_actualizado.stock
@@ -359,6 +359,5 @@ y revocar registros del sistema.
                 
                    st.success(f"🎉 Registro con ID {id_a_modificar} actualizado exitosamente.")
                    st.rerun()
-    else:
-        st.info("💡 Operación no disponible: Base de datos sin registros.")
-
+        else:
+            st.info("💡 Operación no disponible: Base de datos sin registros.")
