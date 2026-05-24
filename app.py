@@ -6,9 +6,9 @@ import streamlit as axes
 
 import numpy as np
 
-import libreria_funciones_proyecto1 as al
+import libreria_funciones_proyecto1 as lf
 
-import librería_clases_proyecto1 as lf
+import librería_clases_proyecto1 as lc
 
 st.title("Mi Primera Aplicación en Python ")
 
