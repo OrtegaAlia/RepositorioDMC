@@ -313,8 +313,8 @@ y revocar registros del sistema.
                     "Total (S/)": nuevo_objeto.calcular_valor_total()
                 }])
             
-               st.session_state.crud_datos = pd.concat([st.session_state.crud_datos, nueva_fila], ignore_index=True)
-               st.success(f"✅ Objeto de clase instanciado correctamente: '{nuevo_objeto.nombre}' guardado.")
+                st.session_state.crud_datos = pd.concat([st.session_state.crud_datos, nueva_fila], ignore_index=True)
+                st.success(f"✅ Objeto de clase instanciado correctamente: '{nuevo_objeto.nombre}' guardado.")
 
     with tab_leer:
         st.subheader("📊 Registros Vigentes en el Sistema")
