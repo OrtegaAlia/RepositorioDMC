@@ -243,7 +243,7 @@ en una tabla histórica matricial.
             "Función Ejecutada", "Parámetro 1", "Parámetro 2", "Parámetro 3", "Resultado Final"
             ])
             st.rerun()
-     else:
+    else:
          st.info("💡 La tabla histórica está vacía. Configure los parámetros superiores y ejecute la función.")
 
 elif Ejercicio == "Ejercicio 4":
