@@ -359,6 +359,6 @@ y revocar registros del sistema.
                 
                    st.success(f"🎉 Registro con ID {id_a_modificar} actualizado exitosamente.")
                    st.rerun()
-     else:
+    else:
          st.info("💡 Operación no disponible: Base de datos sin registros.")
 
