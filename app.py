@@ -219,7 +219,21 @@ en una tabla histórica matricial.
         resultado_calculo = calcular_interes_compuesto(param_capital, param_tasa, param_periodos)
         st.markdown("#### 🎯 Resultado Obtenido de la Librería:")
         st.write(f"El valor de retorno procesado por el algoritmo es: **S/ {resultado_calculo:,.2f}**")
+        nueva_fila = pd.DataFrame([{
+            "Función Ejecutada": funcion_seleccionada,
+            "Parámetro 1": f"Capital: ${param_capital:,.2f}",
+            "Parámetro 2": f"Tasa: {param_tasa}%",
+            "Parámetro 3": f"Períodos: {param_periodos}",
+            "Resultado Final": f"$ {resultado_calculo:,.2f}"
+        }])
+        
+        st.session_state.historico_funciones = pd.concat(
+            [st.session_state.historico_funciones, nueva_fila], 
+            ignore_index=True
+        )
+        st.success("✅ Operación completada. Datos añadidos a la bitácora histórica.")
 
+    st.markdown("---")
 
 elif Ejercicio == "Ejercicio 4":
    st.write("Bienvenido Ejercicio 4")
