@@ -167,7 +167,7 @@ elif Ejercicio == "Ejercicio 3":
         return round(capital * (1 + (tasa / 100)) ** periodos, 2)
     if "historico_funciones" not in st.session_state:
         st.session_state.historico_funciones = pd.DataFrame(columns=[
-        "Área", "Capital", "tasa de Interes", "Periodo", "Resultado Final"
+        "Área", "Capital", "Tasa de Interes", "Periodo", "Resultado Final"
         ])
     st.markdown("""
 Este módulo conecta la interfaz gráfica de Streamlit con algoritmos alojados en el archivo 
@@ -220,10 +220,10 @@ en una tabla histórica matricial.
         st.markdown("#### 🎯 Resultado Obtenido de la Librería:")
         st.write(f"El valor de retorno procesado por el algoritmo es: **S/ {resultado_calculo:,.2f}**")
         nueva_fila = pd.DataFrame([{
-            "Función Ejecutada": funcion_seleccionada,
-            "Parámetro 1": f"Capital: S/{param_capital:,.2f}",
-            "Parámetro 2": f"Tasa: {param_tasa}%",
-            "Parámetro 3": f"Períodos: {param_periodos}",
+            "Área": funcion_seleccionada,
+            "Capital": f"Capital: S/{param_capital:,.2f}",
+            "Tasa de Interes": f"Tasa: {param_tasa}%",
+            "Periodo": f"Períodos: {param_periodos}",
             "Resultado Final": f"S/ {resultado_calculo:,.2f}"
         }])
         
