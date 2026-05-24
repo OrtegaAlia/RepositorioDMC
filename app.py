@@ -252,5 +252,6 @@ en una tabla histórica matricial.
 elif Ejercicio == "Ejercicio 4":
    st.write("Bienvenido Ejercicio 4: Uso de clases desde una librería externa con CRUD")
    st.image("Crud.png")
+   import libreria_clases_proyecto1.py as  al
 
     
