@@ -254,6 +254,18 @@ en una tabla histórica matricial.
 elif Ejercicio == "Ejercicio 4":
    st.write("Bienvenido Ejercicio 4: Uso de clases desde una librería externa con CRUD")
    st.image("Crud.png")
+   try:
+    from libreria_clases_proyecto1 import ProductoInventario
+   except ModuleNotFoundError:
 
+    class ProductoInventario:
+        def __init__(self, id_prod: int, nombre: str, stock: int, precio: float):
+            self.id = id_prod
+            self.nombre = nombre
+            self.stock = stock
+            self.precio = precio
+
+        def calcular_valor_total(self):
+            return round(self.stock * self.precio, 2)
 
     
