@@ -297,7 +297,7 @@ y revocar registros del sistema.
             c_stock = st.number_input("Cantidad física en almacén (Stock):", min_value=0, step=1, value=10, key="crud_c_stk")
             c_precio = st.number_input("Costo comercial unitario (S/):", min_value=0.0, step=1.0, value=45.0, format="%.2f", key="crud_c_prc")
 
-        if st.button("Guardar e Instanciar Objeto", type="primary", key="btn_crud_create"):
+        if st.button("Guardar Objeto", type="primary", key="btn_crud_create"):
            if c_nombre.strip() == "":
                st.warning("⚠️ El nombre del artículo es obligatorio.")
            elif c_id in st.session_state.crud_datos["ID"].values:
