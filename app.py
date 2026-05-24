@@ -182,9 +182,9 @@ en una tabla histórica matricial.
     "Seleccione la función analítica a ejecutar:",
     ["Calcular Interés Compuesto (Área: Finanzas / Proyectos)"]
     )
-    col_p1, col_p2, col_p3 = st.columns(3)
+   col_p1, col_p2, col_p3 = st.columns(3)
 
-    with col_p1:
+   with col_p1:
     param_capital = st.number_input(
         "Monto de Capital Inicial (S/):", 
         min_value=0.0, 
@@ -193,7 +193,7 @@ en una tabla histórica matricial.
         key="fn_p1"
     )
 
-    with col_p2:
+   with col_p2:
     param_tasa = st.number_input(
         "Tasa de Interés Nominal (% Anual):", 
         min_value=0.0, 
@@ -203,7 +203,7 @@ en una tabla histórica matricial.
         key="fn_p2"
     )
 
-    with col_p3:
+   with col_p3:
     param_periodos = st.number_input(
         "Horas / Períodos de Tiempo (Años):", 
         min_value=1, 
