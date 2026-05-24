@@ -169,9 +169,8 @@ elif Ejercicio == "Ejercicio 3":
         st.session_state.historico_funciones = pd.DataFrame(columns=[
         "Función Ejecutada", "Parámetro 1", "Parámetro 2", "Parámetro 3", "Resultado Final"
         ])
-    st.markdown("Este módulo conecta la interfaz gráfica de Streamlit con algoritmos alojados en el archivo 
-    modular independiente `libreria_funciones_proyecto1.py`. Al parametrizar las variables de entrada 
-    y activar el proceso, se ejecuta la rutina analítica seleccionada y se guarda un registro de auditoría 
+    st.markdown("Este módulo conecta la interfaz gráfica de Streamlit con algoritmos alojados en el archivo modular independiente `libreria_funciones_proyecto1.py`. 
+    Al parametrizar las variables de entrada y activar el proceso, se ejecuta la rutina analítica seleccionada y se guarda un registro de auditoría 
     en una tabla histórica matricial.")
 
     st.markdown("---")
