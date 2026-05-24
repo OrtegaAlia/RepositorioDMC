@@ -280,4 +280,9 @@ y revocar registros del sistema.
 
     st.markdown("---")
 
-    
+    tab_crear, tab_leer, tab_actualizar, tab_eliminar = st.tabs([
+    "➕ Crear Registro (Create)", 
+    "📖 Visualizar Base de Datos (Read)", 
+    "🔄 Actualizar Atributos (Update)", 
+    "❌ Eliminar Registro (Delete)"
+     ])
