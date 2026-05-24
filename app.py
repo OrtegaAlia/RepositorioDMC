@@ -271,5 +271,13 @@ elif Ejercicio == "Ejercicio 4":
         {"ID": 101, "Nombre": "Teclado Mecánico", "Stock": 15, "Precio": 85.0, "Total ($)": 1275.0},
         {"ID": 102, "Nombre": "Audífonos Inalámbricos", "Stock": 22, "Precio": 60.0, "Total ($)": 1320.0}
         ])
+    st.markdown("""
+Este módulo conecta la interfaz gráfica de Streamlit con la clase estructurada `ProductoInventario` 
+del archivo externo `libreria_clases_proyecto1.py`. Implementa un flujo completo de gestión de 
+datos (**CRUD**) que permite instanciar objetos, leer sus propiedades, actualizar sus atributos 
+y revocar registros del sistema.
+""")
+
+    st.markdown("---")
 
     
